@@ -9,6 +9,6 @@
 <body>
 
     <h1>Bienvenue sur mon site web</h1>
-    <p>Ceci est une page de démonstration</p>
+    <p>Ceci est une page de démonstration.</p>
 </body>
 </html>
