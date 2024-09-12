@@ -1,0 +1,41 @@
+body {
+    min-height: 4096px;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    transition: all 0.5s;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+}
+
+/* Styles pour La Plateforme_ */
+body.plateforme {
+    background-color: #0c35a5;
+    color: #fff;
+}
+
+body.plateforme h1 {
+    color: #ff5c00;
+}
+
+body.plateforme footer {
+    background-color: #ff5c00;
+}
+
+body.plateforme #progress-bar {
+    background-color: #000;
+}

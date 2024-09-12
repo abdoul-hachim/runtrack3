@@ -1,0 +1,13 @@
+/* Ajoutez ces styles à la fin de votre fichier CSS existant */
+
+button {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#citation {
+    margin: 20px;
+    font-style: italic;
+}

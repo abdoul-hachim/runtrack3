@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+</head>
+<body>
+    <h1>Bienvenue</h1>
+    <div id="userInfo"></div>
+    <a href="register.html">S'inscrire</a>
+    <a href="login.html">Se connecter</a>
+    <button id="logoutButton" style="display: none;">Se déconnecter</button>
+
+    <script>
+        function checkLoginStatus() {
+            fetch('../src/controllers/check_login.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.logged_in) {
+                        document.getElementById('userInfo').textContent = `Bonjour, ${data.prenom}!`;
+                        document.getElementById('logoutButton').style.display = 'block';
+                    } else {
+                        document.getElementById('userInfo').textContent = '';
+                        document.getElementById('logoutButton').style.display = 'none';
+                    }
+                });
+        }
+
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            fetch('../src/controllers/logout.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Vous avez été déconnecté.');
+                        checkLoginStatus();
+                    }
+                });
+        });
+
+        checkLoginStatus();
+    </script>
+</body>
+</html>

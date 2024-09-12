@@ -1,0 +1,27 @@
+#rainbowContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#rainbowContainer img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: move;
+}
+
+#message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
