@@ -8,6 +8,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+    
     <footer>
         <div id="progress-bar"></div>
     </footer>
